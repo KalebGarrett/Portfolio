@@ -15,4 +15,10 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-image: url("../img/constellations-wallpaper.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+footer {
+  color: white;
 }
