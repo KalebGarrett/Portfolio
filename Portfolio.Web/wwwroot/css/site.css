@@ -1,24 +1,74 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
+}
+
+* {
+    font-family: Inter, serif;
+}
+
+a {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.anchor-links {
+    display: inline-block;
+    position: relative;
+    color: #f0ad4e;
+}
+
+.anchor-links:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f0ad4e;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.anchor-links:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar {
+    background-color: #4a5052;
+}
+
+.title-text {
+    color: white;
+    font-size: 128px;
+    font-weight: lighter;
+}
+
+.profile-pic {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
-  background-image: url("../img/constellations-wallpaper.jpg");
-  background-attachment: fixed;
-  background-size: cover;
+    margin-bottom: 60px;
+    background-image: url("../img/constellations-wallpaper.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
+
 footer {
-  color: white;
+    color: white;
 }
