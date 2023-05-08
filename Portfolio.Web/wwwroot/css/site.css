@@ -42,7 +42,7 @@ a {
 }
 
 .navbar {
-    background-color: #4a5052;
+    background-color: #323333;
 }
 
 .title-text {
@@ -65,12 +65,12 @@ html {
 body {
     background-color: #1a1e21;;
     margin-bottom: 60px;
-    background-image: url("../img/constellations-wallpaper.jpg");
+    background-image: url("../img/bg-stars.gif");
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
 }
 
 footer {
     color: white;
+    background-color: #323333;
 }
