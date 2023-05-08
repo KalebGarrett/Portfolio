@@ -7,39 +7,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Portfolio.Web.styles.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css"/>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Garrett</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Center anchors & fix margin -->
-            <div class="navbar-collapse collapse d-sm-inline-flex">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark anchor-links" asp-area="" asp-controller="Home" asp-action="Index" style="color: white !important">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark anchor-links" style="color: white !important;">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark anchor-links" style="color: white !important">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dar anchor-links" style="color: white !important">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark anchor-links" style="color: white !important">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @await Html.PartialAsync("_NavBar")
 </header>
 <div class="container">
     <main role="main" class="pb-3">

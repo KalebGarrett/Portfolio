@@ -63,9 +63,11 @@ html {
 }
 
 body {
+    background-color: #1a1e21;;
     margin-bottom: 60px;
     background-image: url("../img/constellations-wallpaper.jpg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
