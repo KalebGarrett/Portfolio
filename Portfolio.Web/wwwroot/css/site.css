@@ -1,5 +1,6 @@
 html {
     font-size: 14px;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -95,11 +96,20 @@ body {
     background-image: url("../img/bg-stars.gif");
     background-attachment: fixed;
     background-repeat: repeat;
+    border: hidden;
+}
+
+.transparent-bg {
+    background-color: hsla(0,3%,9%,59%);
+    /* Fix width */
+    width: 100%;
+    padding: 50px 0px;
 }
 
 footer {
     color: white;
     background-color: #323333;
+    width: 100%;
 }
 
 .icon-effect {
