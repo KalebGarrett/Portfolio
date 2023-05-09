@@ -45,6 +45,28 @@ a {
     background-color: #323333;
 }
 
+.resume-btn {
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+.resume-btn:hover {
+    color: white;
+    transform: scale(1.1);
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.resume-btn:active {
+    opacity: 0.5;
+}
+
+.resume-btn:focus {
+    outline: none;
+}
+
 .title-text {
     color: white;
     font-size: 128px;

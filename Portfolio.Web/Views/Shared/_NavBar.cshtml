@@ -1,29 +1,33 @@
 ﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
-    <div class="container justify-content-center">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Garrett</a>
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex w-25 mr-auto justify-content-start" asp-area="" asp-controller="Home" asp-action="Index" style="color: white">Garrett</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Center anchors & fix margin -->
-        <div class="navbar-collapse collapse d-sm-inline-flex">
-            <ul class="navbar-nav flex-grow-1">
+
+        <!-- fix navbar alignment -->
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+            <ul class="navbar-nav w-100 justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link text-dark anchor-links" asp-area="" asp-controller="Home" asp-action="Index" style="color: white !important">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark anchor-links" style="color: white !important;">About</a>
                 </li>
-                <li class="nav-item" >
+                <li class="nav-item">
                     <a class="nav-link text-dark anchor-links" style="color: white !important">Projects</a>
-                </li>
-                <li class="nav-item" s>
-                    <a class="nav-link text-dar anchor-links" style="color: white !important">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark anchor-links" style="color: white !important">Contact</a>
                 </li>
             </ul>
+        </div>
+
+        <div class="navbar-nav ml-auto w-100 justify-content-end p-sm-1">
+            <div class="nav-item">
+                <button type="submit" class="btn btn-warning resume-btn" onclick="window.open('/img/Garrett-Kaleb-Resume-2023.pdf')">Resume</button>
+            </div>
         </div>
     </div>
 </nav>
