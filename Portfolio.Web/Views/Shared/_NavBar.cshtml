@@ -5,15 +5,13 @@
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- fix navbar alignment -->
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link text-dark anchor-links" asp-area="" asp-controller="Home" asp-action="Index" style="color: white !important">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark anchor-links" style="color: white !important;">About</a>
+                    <a class="nav-link text-dark anchor-links" asp-area="" asp-controller="Home" asp-action="About" style="color: white !important;">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark anchor-links" style="color: white !important">Projects</a>
@@ -23,10 +21,9 @@
                 </li>
             </ul>
         </div>
-
         <div class="navbar-nav justify-content-end">
             <div class="nav-item">
-                <button type="submit" class="btn btn-warning resume-btn" onclick="window.open('/img/Garrett-Kaleb-Resume-2023.pdf')">Resume</button>
+                <button type="submit" class="btn btn-warning resume-btn" onclick="window.open('/docs/Garrett-Kaleb-Resume-2023.pdf')">Resume</button>
             </div>
         </div>
     </div>

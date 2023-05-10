@@ -13,6 +13,16 @@ html {
     font-family: Inter, serif;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main {
+    margin-top: 75px;
+}
+
 a {
     font-size: 15px;
     cursor: pointer;
