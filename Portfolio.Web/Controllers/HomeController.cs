@@ -20,11 +20,13 @@ public class HomeController : Controller
 
     public IActionResult About()
     {
+        ViewData["Title"] = "About Me";
         return View();
     }
 
     public IActionResult Contact()
     {
+        ViewData["Title"] = "Contact Me";
         return View();
     }
     

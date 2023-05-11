@@ -1,5 +1,36 @@
-﻿@{
-    ViewData["Title"] = "Contact Me";
-}
-
-<h2>title</h2>
+﻿<div style="padding-top: 4rem; padding-bottom: 4rem">
+    <div class="container-fluid gray-content-box text-white">
+        <!-- Add functionality -->
+        <form>
+            <div class="col-12 text-light" style="padding-top: 2rem">
+                <h2 class="text-center text-warning" style="font-size: 54px">@ViewData["Title"]</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name *</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                    </div>
+                </div>
+                <div class="col-md-8 pt-3">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email *</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter Email" required>
+                    </div>
+                </div>
+                <div class="col-md-8 pt-3">
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea type="textarea" class="form-control" id="message" placeholder="Enter Your Message" rows="6" required></textarea>
+                    </div>
+                </div>
+                <!-- Fix btn spacing -->
+                <div class="col-md-8 pt-3 d-flex justify-content-center">
+                    <button type="submit" class="btn- btn-warning btn-lg text-white" id="submit">Submit</button>
+                    <br/>
+                    <button type="reset" class="btn- btn-warning btn-lg text-white" id="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
