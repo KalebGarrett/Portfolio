@@ -26,6 +26,7 @@ public class HomeController : Controller
 
     public IActionResult Project()
     {
+        ViewData["Title"] = "Projects";
         return View();
     }
 

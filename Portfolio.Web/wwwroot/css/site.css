@@ -140,3 +140,8 @@ footer {
     background-color: #1a1e21;
     border-radius: 25px;
 }
+
+.card-padding {
+    row-gap: 2em; 
+    padding-bottom: 50px
+}
