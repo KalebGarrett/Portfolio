@@ -24,6 +24,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Project()
+    {
+        return View();
+    }
+
     public IActionResult Contact()
     {
         ViewData["Title"] = "Contact Me";
