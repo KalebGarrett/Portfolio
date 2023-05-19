@@ -1,34 +1,30 @@
-﻿<div style="padding-top: 2rem; padding-bottom: 2rem">
+﻿<div class="gray-content-box-padding">
     <div class="container-fluid gray-content-box text-white">
-        <!-- Add functionality -->
-        <form>
-            <div class="col-12 text-light" style="padding-top: 2rem">
-                <h2 class="text-center text-warning" style="font-size: 48px">@ViewData["Title"]</h2>
-            </div>
+        <form action="https://formsubmit.co/51068d89670ef1343e4836e2177507e5" method="post" class="needs-validation">
+            <input type="hidden" name="_subject" value="New submission!">
+            <h1 class="col-12 text-center text-warning pt-3" style="font-size: 48px">@ViewData["Title"]</h1>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="form-group">
                         <label class="form-label" for="name">Full Name *</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
                     </div>
                 </div>
                 <div class="col-md-8 pt-3">
                     <div class="form-group">
                         <label class="form-label" for="email">Email *</label>
-                        <input type="text" class="form-control" id="email" placeholder="Enter Email" required>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email" required>
                     </div>
                 </div>
                 <div class="col-md-8 pt-3">
                     <div class="form-group">
                         <label class="form-label" for="message">Message *</label>
-                        <textarea type="textarea" class="form-control" id="message" placeholder="Enter Your Message" rows="6" required></textarea>
+                        <textarea type="textarea" class="form-control" id="message" name="message" placeholder="Enter Your Message" rows="6" required></textarea>
                     </div>
                 </div>
-                <!-- Fix btn spacing -->
-                <div class="col-md-8 pt-3 d-flex justify-content-center">
-                    <button type="submit" class="btn- btn-warning btn-lg text-white" id="submit">Submit</button>
-                    <br/>
-                    <button type="reset" class="btn- btn-warning btn-lg text-white" id="reset">Reset</button>
+                <div class="col-md-8 pt-3" style="padding-left: 21em">
+                    <button type="submit" class="btn btn-warning btn-lg text-white" id="submit">Submit</button>
+                    <button type="reset" class="btn btn-warning btn-lg text-white" id="reset">Reset</button>
                 </div>
             </div>
         </form>

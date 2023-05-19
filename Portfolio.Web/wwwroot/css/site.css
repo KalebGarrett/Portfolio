@@ -136,6 +136,10 @@ footer {
     outline: none;
 }
 
+.gray-content-box-padding {
+    padding-top: 2rem; padding-bottom: 2rem
+}
+
 .gray-content-box {
     padding-bottom: 2rem;
     background-color: #1a1e21;
