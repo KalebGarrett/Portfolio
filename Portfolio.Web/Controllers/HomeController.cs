@@ -35,6 +35,12 @@ public class HomeController : Controller
         ViewData["Title"] = "Contact Me";
         return View();
     }
+
+    public IActionResult Submission()
+    {
+        ViewData["Title"] = "Your message was successfully submitted!";
+        return View();
+    }
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

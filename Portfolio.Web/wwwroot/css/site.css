@@ -25,11 +25,6 @@ html {
     margin-top: 75px;
 }
 
-a {
-    font-size: 15px;
-    cursor: pointer;
-}
-
 .anchor-links {
     display: inline-block;
     position: relative;
@@ -113,12 +108,6 @@ body {
     padding: 50px 0px;
 }
 
-footer {
-    color: white;
-    background-color: #4a4848;
-    width: 100%;
-}
-
 .icon-effect {
     text-decoration: none;
 }
@@ -149,4 +138,11 @@ footer {
 .card-padding {
     row-gap: 2em; 
     padding-bottom: 50px
+}
+
+.return-home-anchor {
+    text-decoration: none;
+}
+.return-home-anchor:hover {
+    opacity: 0.8;
 }
