@@ -28,7 +28,7 @@ html {
 .anchor-links {
     display: inline-block;
     position: relative;
-    color: #f0ad4e;
+    color: #ffc107;
 }
 
 .anchor-links:after {
@@ -39,7 +39,7 @@ html {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #f0ad4e;
+    background-color: #ffc107;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
