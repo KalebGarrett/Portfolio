@@ -1,6 +1,6 @@
 ﻿<div class="gray-content-box-padding">
     <div class="container gray-content-box">
-        <div class="d-flex flex-wrap align-content-start justify-content-around card-padding">
+        <div class="d-flex flex-wrap align-items-start justify-content-around card-padding">
             <h1 class="col-12 text-center text-warning pt-3" style="font-size: 48px">@ViewData["Title"]</h1>
             <div class="card text-center" style="width: 24rem;">
                 <img src="/img/portfolio-card-img.JPG" alt="Project card image">
@@ -8,28 +8,36 @@
                     <h5 class="card-title lead">
                         <b>Portfolio Website</b>
                     </h5>
-                    <p class="card-text ">
+                    <p class="card-text">
                         <div class="lead">
                             Description:
                         </div>
-                        My portfolio website built with .NET MVC hosted on Azure to my practice front-end skills
-                        and to display the projects I have created.
+                        My portfolio website built with .NET MVC hosted on Azure to my practice front-end skills and to display projects I have created.
                     </p>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card1">More Info</button>
+                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card1">Show More</button>
                 </div>
+                <ul class="list-group list-group-flush collapse text-center" id="card1">
+                    <li class="list-group-item">
+                        <b>Challenges:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>Solutions:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>What I learned:</b> <br/> Placeholder text...
+                    </li>
+                </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://kalebgarrett.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-microsoft" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
-
                     <a href="https://github.com/KalebGarrett/Portfolio" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
                 </div>
             </div>
-
             <div class="card text-center" style="width: 24rem;">
                 <img src="/img/amiibo-card-img.jpg" alt="Project card image">
                 <div class="card-body">
@@ -39,24 +47,32 @@
                     <p class="card-text">
                         <div class="lead">
                             Description:
-                        </div>
-                        A Nintendo Amiibo information app built with .NET MVC that pulls from Amiibo's API.
-                    </p> <br>
+                        </div> A Nintendo Amiibo information app built with .NET MVC that pulls from Amiibo's API.
+                    </p>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card2">More Info</button>
+                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card2">Show More</button>
                 </div>
+                <ul class="list-group list-group-flush collapse text-center" id="card2">
+                    <li class="list-group-item">
+                        <b>Challenges:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>Solutions:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>What I learned:</b> <br/> Placeholder text...
+                    </li>
+                </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://amiibos.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-microsoft" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
-
                     <a href="https://github.com/KalebGarrett/Amiibo" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
                 </div>
             </div>
-
             <div class="card text-center" style="width: 24rem;">
                 <img src="/img/chef-mate-card-img.JPG" alt="Project card image">
                 <div class="card-body">
@@ -68,18 +84,28 @@
                             Description:
                         </div>
                         INCOMPLETE PROJECT! A food recipe app built with .NET MVC and Blazor.
-                    </p> <br>
+                    </p>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card3">More Info</button>
                 </div>
+                <ul class="list-group list-group-flush collapse text-center" id="card3">
+                    <li class="list-group-item">
+                        <b>Challenges:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>Solutions:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>What I learned:</b> <br/> Placeholder text...
+                    </li>
+                </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://github.com/KalebGarrett/ChefMate" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
                 </div>
             </div>
-
             <div class="card text-center" style="width: 24rem;">
                 <img src="/img/fish-watch-card-img.jpg" alt="Project card image">
                 <div class="card-body">
@@ -91,22 +117,31 @@
                             Description:
                         </div>
                         A seafood information app built with .NET MVC that pulls from Fish Watches API.
-                    </p> <br>
+                    </p>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card4">More Info</button>
                 </div>
+                <ul class="list-group list-group-flush collapse text-center" id="card4">
+                    <li class="list-group-item">
+                        <b>Challenges:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>Solutions:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>What I learned:</b> <br/> Placeholder text...
+                    </li>
+                </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://fishwatch.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-microsoft" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
-
                     <a href="https://github.com/KalebGarrett/Amiibo" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
                 </div>
             </div>
-
             <div class="card text-center" style="width: 24rem;">
                 <img src="/img/calculator-card-img.jpg" alt="Project card image">
                 <div class="card-body">
@@ -118,11 +153,22 @@
                             Description:
                         </div>
                         A calculator that allows you to do basic arithmetic.
-                    </p> <br>
+                    </p>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card5">More Info</button>
                 </div>
+                <ul class="list-group list-group-flush collapse text-center" id="card5">
+                    <li class="list-group-item">
+                        <b>Challenges:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>Solutions:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>What I learned:</b> <br/> Placeholder text...
+                    </li>
+                </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://basiccalculator.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-microsoft" style="color: #ffc107; font-size: 24px;"></i>
@@ -132,7 +178,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="card text-center" style="width: 24rem;">
                 <img src="/img/central-plaza-card-img.JPG" alt="Project card image">
                 <div class="card-body">
@@ -149,6 +194,17 @@
                 <div class="text-center">
                     <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card6">More Info</button>
                 </div>
+                <ul class="list-group list-group-flush collapse text-center" id="card6">
+                    <li class="list-group-item">
+                        <b>Challenges:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>Solutions:</b> <br/> Placeholder text...
+                    </li>
+                    <li class="list-group-item">
+                        <b>What I learned:</b> <br/> Placeholder text...
+                    </li>
+                </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://github.com/KalebGarrett/CentralPlaza" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
