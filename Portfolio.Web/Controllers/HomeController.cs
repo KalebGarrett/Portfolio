@@ -15,30 +15,31 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewData["Title"] = "Kaleb Garrett";
         return View();
     }
 
     public IActionResult About()
     {
-        ViewData["Title"] = "About Me";
+        ViewData["Title"] = "About";
         return View();
     }
 
     public IActionResult Project()
     {
-        ViewData["Title"] = "Projects";
+        ViewData["Title"] = "Project";
         return View();
     }
 
     public IActionResult Contact()
     {
-        ViewData["Title"] = "Contact Me";
+        ViewData["Title"] = "Contact";
         return View();
     }
 
     public IActionResult Submission()
     {
-        ViewData["Title"] = "Your message was successfully submitted!";
+        ViewData["Title"] = "Submission";
         return View();
     }
     
