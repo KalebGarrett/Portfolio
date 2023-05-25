@@ -1,25 +1,23 @@
-﻿<!-- Make cards the same size in height -->
-<!-- Add info to cards -->
+﻿<!-- Fix cards from row toggling -->
+<!-- Make buttons same height -->
 <div class="gray-content-box-padding">
-    <div class="container gray-content-box">
-        <div class="d-flex flex-wrap align-items-start justify-content-around card-padding">
-            <h1 class="col-12 text-center text-warning pt-3" style="font-size: 48px">Projects</h1>
-            <div class="card text-center" style="width: 24rem;">
-                <img src="/img/portfolio-card-img.JPG" alt="Project card image">
-                <div class="card-body">
-                    <h5 class="card-title lead">
-                        <b>Portfolio Website</b>
-                    </h5>
-                    <p class="card-text">
-                        <div class="lead">
-                            Description:
-                        </div>
-                        INCOMPLETE PROJECT! My portfolio website built with .NET MVC hosted on Azure to my practice front-end skills and to display projects I have created.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card1">Show More</button>
-                </div>
+<div class="container gray-content-box">
+<h1 class="col-12 text-center text-warning pt-3" style="font-size: 48px">Projects</h1>
+<br/>
+<div class="container">
+<div class="row gy-3">
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center" style="width: 100%">
+            <img src="/img/portfolio-card-img.JPG" class="img-fluid" style=""/>
+            <div class="card-header" style="font-size: 18px">Portfolio Website</div>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">
+                    INCOMPLETE PROJECT! My portfolio website built with .NET MVC hosted on Azure to my practice front-end skills and to display projects I have created.
+                </p>
+
+                <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card1">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card1">
                     <li class="list-group-item">
                         <b>Challenges:</b> <br/> Placeholder text...
@@ -40,21 +38,20 @@
                     </a>
                 </div>
             </div>
-            <div class="card text-center" style="width: 24rem;">
-                <img src="/img/amiibo-card-img.jpg" alt="Project card image">
-                <div class="card-body">
-                    <h5 class="card-title lead">
-                        <b>Amiibos - Web App</b>
-                    </h5>
-                    <p class="card-text">
-                        <div class="lead">
-                            Description:
-                        </div> A Nintendo Amiibo information app built with .NET MVC that pulls from Amiibo's API.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card2">Show More</button>
-                </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center" style="width: 100%">
+            <img src="/img/amiibo-card-img.jpg" class="img-fluid"/>
+            <div class="card-header" style="font-size: 18px">Amiibos - Web App</div>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">
+                    A Nintendo Amiibo information app built with .NET MVC that pulls from Amiibo's API.
+                </p>
+
+                <button class="btn btn-warning w-75 mt-auto" data-bs-toggle="collapse" data-bs-target="#card2">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card2">
                     <li class="list-group-item">
                         <b>Challenges:</b> <br/> This project presented several difficulties. Trying to learn about Generics, Lambda expressions, to integrating to the Amiibo API was a big challenge for me.
@@ -63,7 +60,7 @@
                         <b>Solutions:</b> <br/> This was my third attempt building a web app that pulls from an API. I tried to figure out as much as I could on my own before asking for assistance to complete the web app. I was able to get 85% of the way there on my own.
                     </li>
                     <li class="list-group-item">
-                        <b>What I learned:</b> <br/> After my third attempt, I learned more about how Generics work and how Lambda expressions are more efficient at creating a function. In addition, I developed a greater comprehension of how the backend of things functions while pulling data from an API. 
+                        <b>What I learned:</b> <br/> After my third attempt, I learned more about how Generics work and how Lambda expressions are more efficient at creating a function. In addition, I developed a greater comprehension of how the backend of things functions while pulling data from an API.
                     </li>
                 </ul>
                 <div class="card-body d-flex justify-content-center">
@@ -75,22 +72,20 @@
                     </a>
                 </div>
             </div>
-            <div class="card text-center" style="width: 24rem;">
-                <img src="/img/chef-mate-card-img.JPG" alt="Project card image">
-                <div class="card-body">
-                    <h5 class="card-title lead">
-                        <b>Chef Mate - Web App & API</b>
-                    </h5>
-                    <p class="card-text">
-                        <div class="lead">
-                            Description:
-                        </div>
-                        INCOMPLETE PROJECT! A food recipe app built with .NET MVC and Blazor.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card3">More Info</button>
-                </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center" style="width: 100%">
+            <img src="/img/chef-mate-card-img.JPG" class="img-fluid"/>
+            <div class="card-header" style="font-size: 18px">Chef Mate - Web App & API</div>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">
+                    INCOMPLETE PROJECT! A food recipe app built with .NET MVC and Blazor.
+                </p>
+
+                <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card3">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card3">
                     <li class="list-group-item">
                         <b>Challenges:</b> <br/> Placeholder text...
@@ -108,69 +103,68 @@
                     </a>
                 </div>
             </div>
-            <div class="card text-center" style="width: 24rem;">
-                <img src="/img/fish-watch-card-img.jpg" alt="Project card image">
-                <div class="card-body">
-                    <h5 class="card-title lead">
-                        <b>Fish Watch - Web App</b>
-                    </h5>
-                    <p class="card-text">
-                        <div class="lead">
-                            Description:
-                        </div>
-                        A seafood information app built with .NET MVC that pulls from Fish Watches API.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card4">More Info</button>
-                </div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="row gy-3">
+    <div class="col-md-4">
+        <div class="card h-100 text-center" style="width: 100%">
+            <img src="/img/fish-watch-card-img.jpg" class="img-fluid"/>
+            <div class="card-header" style="font-size: 18px">Fish Watch - Web App</div>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">
+                    A seafood information app built with .NET MVC that pulls from Fish Watches API.
+                </p>
+
+                <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card4">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card4">
                     <li class="list-group-item">
                         <b>Challenges:</b> <br/> This project presented several difficulties. This was my first attempt trying to learn about Generics, Lambda expressions, Bootstrap, and integrating with an API.
                     </li>
                     <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I tried to figure out as much as I could on my own before asking for assistance to complete the web app. I spent much time learning concepts about API integration and using Generics. I was able to get 60% of the way there on my own. 
+                        <b>Solutions:</b> <br/> I tried to figure out as much as I could on my own before asking for assistance to complete the web app. I spent much time learning concepts about API integration and using Generics. I was able to get 60% of the way there on my own.
                     </li>
                     <li class="list-group-item">
-                        <b>What I learned:</b> <br/> I learned more about how generics work and I developed a better understanding of how API integration works. Furthermore, I learned how powerful using an API is to create a web app that is full of information and how Bootstrap can aid you in creating a user-friendly site. 
+                        <b>What I learned:</b> <br/> I learned more about how generics work and I developed a better understanding of how API integration works. Furthermore, I learned how powerful using an API is to create a web app that is full of information and how Bootstrap can aid you in creating a user-friendly site.
                     </li>
                 </ul>
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://fishwatch.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-microsoft" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
-                    <a href="https://github.com/KalebGarrett/Amiibo" class="card-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/KalebGarrett/FishWatch" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
                     </a>
                 </div>
             </div>
-            <div class="card text-center" style="width: 24rem;">
-                <img src="/img/calculator-card-img.jpg" alt="Project card image">
-                <div class="card-body">
-                    <h5 class="card-title lead">
-                        <b>Calculator - Static Website</b>
-                    </h5>
-                    <p class="card-text">
-                        <div class="lead">
-                            Description:
-                        </div>
-                        A calculator that allows you to do basic arithmetic.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card5">More Info</button>
-                </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center" style="width: 100%">
+            <img src="/img/calculator-card-img.jpg" class="img-fluid"/>
+            <div class="card-header" style="font-size: 18px">Calculator - Static Website</div>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">
+                    A calculator that allows you to do basic arithmetic.
+                </p>
+
+                <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card5">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card5">
                     <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This project was rather straight forward. The main challenge that I encountered was keeping the calculator buttons all together in a grid. 
+                        <b>Challenges:</b> <br/> This project was rather straight forward. The main challenge that I encountered was keeping the calculator buttons all together in a grid.
                     </li>
                     <li class="list-group-item">
                         <b>Solutions:</b> <br/> The solution that I approached was to keep everything in one div that would be called the "calculator grid" to use CSS to keep all of the buttons together and to keep them uniform in shape and size.
                     </li>
                     <li class="list-group-item">
-                        <b>What I learned:</b> <br/> What I learned from this project is that using little CSS can go a long way in creating a good looking website and how JavaScript plays a pivotal role in a website's functionality. 
+                        <b>What I learned:</b> <br/> What I learned from this project is that using little CSS can go a long way in creating a good looking website and how JavaScript plays a pivotal role in a website's functionality.
                     </li>
                 </ul>
+
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://basiccalculator.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-microsoft" style="color: #ffc107; font-size: 24px;"></i>
@@ -180,25 +174,23 @@
                     </a>
                 </div>
             </div>
-            <div class="card text-center" style="width: 24rem;">
-                <img src="/img/central-plaza-card-img.JPG" alt="Project card image">
-                <div class="card-body">
-                    <h5 class="card-title lead">
-                        <b>Central Plaza - Console App</b>
-                    </h5>
-                    <p class="card-text ">
-                        <div class="lead">
-                            Description:
-                        </div>
-                        A console app demonstrating Inheritance and Polymorphism.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card6">More Info</button>
-                </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center" style="width: 100%">
+            <img src="/img/central-plaza-card-img.JPG" class="img-fluid"/>
+            <div class="card-header" style="font-size: 18px">Central Plaza - Console App</div>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">
+                    A console app demonstrating Inheritance and Polymorphism.
+                </p>
+
+                <button class="btn btn-warning w-75" data-bs-toggle="collapse" data-bs-target="#card6">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card6">
                     <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This project was relatively straight forward. The biggest challenge I encountered was trying to make my code less reduntant as possible by using Inheritance and Polymorphism. 
+                        <b>Challenges:</b> <br/> This project was relatively straight forward. The biggest challenge I encountered was trying to make my code less reduntant as possible by using Inheritance and Polymorphism.
                     </li>
                     <li class="list-group-item">
                         <b>Solutions:</b> <br/> I utilized several resources from W3Schools to videos to learn more about how to use Inheritance and Polymorphism.
@@ -207,6 +199,7 @@
                         <b>What I learned:</b> <br/> I learned that using Inheritance and Polymorphism is a very important concept to grasp because they allow programmers to create classes that are built upon existing classes, to specify a new implementation while maintaining the same behaviors, and to reuse code.
                     </li>
                 </ul>
+
                 <div class="card-body d-flex justify-content-center">
                     <a href="https://github.com/KalebGarrett/CentralPlaza" class="card-link" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github" style="color: #ffc107; font-size: 24px;"></i>
@@ -215,4 +208,7 @@
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
 </div>

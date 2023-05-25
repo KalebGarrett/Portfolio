@@ -137,11 +137,6 @@ body {
     border-radius: 25px;
 }
 
-.card-padding {
-    row-gap: 2em; 
-    padding-bottom: 50px
-}
-
 .return-home-anchor {
     text-decoration: none;
 }
