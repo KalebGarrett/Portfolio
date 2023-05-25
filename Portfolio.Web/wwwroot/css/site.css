@@ -137,6 +137,12 @@ body {
     border-radius: 25px;
 }
 
+.card-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
 .return-home-anchor {
     text-decoration: none;
 }
