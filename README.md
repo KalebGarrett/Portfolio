@@ -3,4 +3,4 @@ My portfolio website built with .NET MVC
 
 Link: https://kalebgarrett.azurewebsites.net/
 
-![portfolio-card-img](https://github.com/KalebGarrett/Portfolio/assets/110064473/25109dcb-05b6-4adc-a364-9d0c5859cb06)
+![portfolio-card](https://github.com/KalebGarrett/Portfolio/assets/110064473/da4e3705-d977-4d96-ad33-e3b197838e57)
