@@ -73,9 +73,15 @@ html {
     outline: none;
 }
 
+.title-row {
+    margin-top: 8rem;
+    height: 75%; 
+    padding-bottom: 6rem
+}
+
 .title-text {
     color: white;
-    font-size: 64px;
+    font-size: 84px;
     font-weight: lighter;
 }
 
