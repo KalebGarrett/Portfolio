@@ -111,7 +111,6 @@ body {
 
 .transparent-bg {
     background-color: hsla(0,3%,9%,59%);
-    /* Fix width */
     width: 100% !important;
     padding: 50px 0px;
 }
