@@ -1,0 +1,17 @@
+﻿.title-row {
+    margin-top: 8rem;
+    height: 75%;
+    padding-bottom: 6rem
+}
+
+.title-text {
+    color: white;
+    font-size: 84px;
+    font-weight: lighter;
+}
+
+.passion-statement {
+    font-size: 28px;
+    color: white;
+    font-weight: normal;
+}

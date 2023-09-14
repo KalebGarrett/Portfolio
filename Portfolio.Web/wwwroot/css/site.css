@@ -73,30 +73,6 @@ html {
     outline: none;
 }
 
-.title-row {
-    margin-top: 8rem;
-    height: 75%; 
-    padding-bottom: 6rem
-}
-
-.title-text {
-    color: white;
-    font-size: 84px;
-    font-weight: lighter;
-}
-
-.passion-statement {
-    font-size: 28px;
-    color: white;
-    font-weight: normal;
-}
-
-.profile-pic {
-    width: 192px;
-    height: 192px;
-    border-radius: 50%;
-}
-
 html {
     position: relative;
     min-height: 100%;
@@ -118,7 +94,7 @@ html {
 
 /* Scrollbar buttons (arrows) */
 ::-webkit-scrollbar-button {
-    background-color: #666;
+    background-color: #666666;
 }
 
 /* Scrollbar corner (bottom-right) */
@@ -131,11 +107,6 @@ body {
     background-attachment: fixed;
     background-repeat: repeat;
     border: hidden;
-}
-
-.transparent-bg {
-    background-color: hsla(0,3%,9%,33%);
-    padding: 50px 0px;
 }
 
 .icon-effect {
@@ -163,17 +134,4 @@ body {
     padding-bottom: 2rem;
     background-color: #1a1e21;
     border-radius: 25px;
-}
-
-.card-photo {
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
-}
-
-.return-home-anchor {
-    text-decoration: none;
-}
-.return-home-anchor:hover {
-    opacity: 0.8;
 }
