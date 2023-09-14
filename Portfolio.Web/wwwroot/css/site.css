@@ -100,6 +100,30 @@ html {
 html {
     position: relative;
     min-height: 100%;
+    /* Always keeps scroll bar visible */
+    overflow-y: scroll;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar {
+    width: 17px; 
+    background-color: #333; 
+}
+
+/* Scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 6px; 
+}
+
+/* Scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+    background-color: #666;
+}
+
+/* Scrollbar corner (bottom-right) */
+::-webkit-scrollbar-corner {
+    background-color: #333; 
 }
 
 body {
