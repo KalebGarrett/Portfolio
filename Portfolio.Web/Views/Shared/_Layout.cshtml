@@ -23,11 +23,9 @@
 <header>
     @await Html.PartialAsync("_NavBar")
 </header>
-<div class="container main">
-    <main role="main" class="pb-3">
+<main role="main" class="pb-3 main">
         @RenderBody()
     </main>
-</div>
 <footer class="border-top footer">
     @await Html.PartialAsync("_Footer")
 </footer>

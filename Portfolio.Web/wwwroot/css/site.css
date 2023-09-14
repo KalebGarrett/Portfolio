@@ -110,8 +110,7 @@ body {
 }
 
 .transparent-bg {
-    background-color: hsla(0,3%,9%,59%);
-    width: 100% !important;
+    background-color: hsla(0,3%,9%,33%);
     padding: 50px 0px;
 }
 
