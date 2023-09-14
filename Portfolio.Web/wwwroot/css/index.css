@@ -15,3 +15,64 @@
     color: white;
     font-weight: normal;
 }
+
+.skill-section {
+    margin-top: 40rem;
+    padding: 30px;
+    background-color: #1a1e21;
+}
+
+.skill-bar-title {
+    font-size: 48px;
+    font-weight: initial;
+}
+
+/* Custom styles for circular skill bars */
+.skill-bar {
+    text-align: center;
+}
+
+.skill-circle {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 10px solid #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.skill-name {
+    color: #ffc107;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.skill-circle::after {
+    content: attr(data-value) '%'; /* Display skill level percentage */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+/* Adjust the border color based on the skill level */
+[data-value="80"]::before {
+    border-color: #ffc107;
+}
+
+[data-value="70"]::before {
+    border-color: #ffc107;
+}
+
+[data-value="60"]::before {
+    border-color: #ffc107;
+}
+
+.transparent-bg {
+    background-color: hsla(0,3%,9%,70%);
+    padding: 75px;
+}
