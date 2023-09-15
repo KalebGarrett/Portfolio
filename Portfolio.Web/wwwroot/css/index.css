@@ -19,11 +19,12 @@
 .skill-section {
     margin-top: 40rem;
     padding: 75px;
-    background-color: #1a1e21;
+    background-color: hsla(0,3%,9%,70%);
 }
 
 .skill-bar-title {
-    font-size: 48px;
+    font-weight: initial;
+    font-size: 58px;
 }
 
 .circular-progress {
@@ -62,7 +63,12 @@
     font-weight: normal;    
 }
 
-.transparent-bg {
-    background-color: hsla(0,3%,9%,70%);
+.technologies-title {
+    font-weight: initial; 
+    font-size: 40px
+}
+
+.technologies-section {
+    background-color: rgba(26, 30, 33, 80%);
     padding: 75px;
 }
