@@ -18,58 +18,48 @@
 
 .skill-section {
     margin-top: 40rem;
-    padding: 30px;
+    padding: 75px;
     background-color: #1a1e21;
 }
 
 .skill-bar-title {
     font-size: 48px;
-    font-weight: initial;
 }
 
-/* Custom styles for circular skill bars */
-.skill-bar {
-    text-align: center;
-}
-
-.skill-circle {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: 10px solid #e0e0e0;
+.circular-progress {
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
+    background: conic-gradient(#1797ff 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    position: relative;
 }
 
-.skill-name {
-    color: #ffc107;
-    font-weight: lighter;
-    font-size: 25px;
-}
-
-.skill-circle::after {
-    content: attr(data-value) '%'; /* Display skill level percentage */
+.circular-progress::before {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-weight: bold;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #1a1e21;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.skill-bar-text {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
     color: #ffc107;
-}
-
-/* Adjust the border color based on the skill level */
-[data-value="80"]::before {
-    border-color: #ffc107;
-}
-
-[data-value="70"]::before {
-    border-color: #ffc107;
-}
-
-[data-value="60"]::before {
-    border-color: #ffc107;
+    font-size: 25px;
+    font-weight: normal;    
 }
 
 .transparent-bg {
