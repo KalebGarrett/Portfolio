@@ -23,4 +23,12 @@
     }
 
     const progressInterval = setInterval(updateProgress, speed);
+    
+    function openPDF(){
+        $(".resume-open").click(function (){
+           window.open("file:///D:/Kaleb's%20Drive/Documents/Professional/Garrett-Resume-2023.pdf").alert("I have been clicked"); 
+        });
+    }
+    
+    openPDF();
 });
