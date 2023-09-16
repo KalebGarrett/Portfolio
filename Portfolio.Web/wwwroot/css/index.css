@@ -5,17 +5,27 @@
 }
 
 .title-text {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: white;
-    font-size: 60px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-family: 'comfortaa', sans-serif;
+}
+
+.blue-span {
+    color: #1797ff;
+}
+
+.fullstack-dev {
+    font-size: 42px;
+    color: white;
+    font-family: 'comfortaa', sans-serif;
 }
 
 .passion-statement {
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     font-weight: normal;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'comfortaa', sans-serif;
 }
 
 .skill-section {
