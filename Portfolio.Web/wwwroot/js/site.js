@@ -33,7 +33,7 @@ $(window).ready(function () {
     });
 
     $(".fullstack-dev").fadeOut(function () {
-        $(this).append("Full Stack <span class='blue-span'>.Developer</span>").fadeIn("slow")
+        $(this).append("Full Stack <span class='blue-span'>Developer</span>").fadeIn("slow")
     });
     
     $(".passion-statement").fadeOut(function () {
