@@ -49,5 +49,6 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
   color: white;
-  background-color: #4a4848;
+  background-color: #343A40;
+  font-size: 16px;
 }

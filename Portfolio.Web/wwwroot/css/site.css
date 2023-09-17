@@ -46,7 +46,7 @@ html {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #1797ff, #ffffff);
+    background: #1797ff;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -112,6 +112,8 @@ body {
     background-attachment: fixed;
     background-repeat: repeat;
     border: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .icon-effect {
@@ -140,9 +142,4 @@ body {
     background-color: rgba(26, 30, 33, 50%);
     border-radius: 25px;
     margin-bottom: 3rem;
-}
-
-.footer {
-    background-color: #343A40 !important;
-    font-size: 16px;
 }
