@@ -40,3 +40,10 @@ $(window).ready(function () {
         $(this).append("<span class='blue-span'>Passionate</span> about <span class='blue-span'>.NET</span>").fadeIn("slow")
     });
 });
+
+// Opens resume 
+$(document).ready(function (){
+    $(".resume-btn").click(function (){
+        window.open("/docs/Garrett-Resume-2023.pdf") 
+    });
+});
