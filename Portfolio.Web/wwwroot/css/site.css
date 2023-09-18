@@ -56,25 +56,25 @@ html {
     transform-origin: bottom left;
 }
 
-.resume-btn {
+.btn-primary {
     color: white;
     cursor: pointer;
     border: none;
     transition: all .5s ease-in-out;
 }
 
-.resume-btn:hover {
+.btn-primary:hover {
     color: white;
     transform: scale(1.05);
     opacity: 0.8;
     text-decoration: none;
 }
 
-.resume-btn:active {
+.btn-primary:active {
     opacity: 0.5;
 }
 
-.resume-btn:focus {
+.btn-primary:focus {
     outline: none;
 }
 
