@@ -4,7 +4,7 @@ $(document).ready(function () {
     const progressValues = $(".progress-value");
     const skills = [0, 0, 0, 0];
     const speed = 50;
-    const progressEndValues = [90, 70, 80, 60];
+    const progressEndValues = [90, 70, 80, 70];
 
     function updateProgress() {
         for (let i = 0; i < circularProgress.length; i++) {
