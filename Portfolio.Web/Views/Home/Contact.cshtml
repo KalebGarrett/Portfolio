@@ -1,22 +1,37 @@
-﻿ <section class="gray-content-box-padding">
+﻿<section class="gray-content-box-padding">
     <div class="container gray-content-box text-white">
         <form action="https://formsubmit.co/51068d89670ef1343e4836e2177507e5" method="post" class="needs-validation">
             <input type="hidden" name="_next" value="https://kalebgarrett.azurewebsites.net/Home/Submission">
             <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_captcha" value="false">
             <h1 class="col-12 text-center text-warning" style="font-size: 48px">Contact Me</h1>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label class="form-label" for="name">Full Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+                        <label class="form-label" for="name"><i></i> Name <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="height: 38px">
+                                    <i class="fa-solid fa-signature"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-8 pt-3">
-                    <div class="form-group">
-                        <label class="form-label" for="email">Email <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
-                    </div>
-                </div>
+               <div class="col-md-8 pt-3">
+                   <div class="form-group">
+                       <label class="form-label" for="email">Email <span class="text-danger">*</span></label>
+                       <div class="input-group">
+                           <div class="input-group-prepend">
+                               <span class="input-group-text" style="height: 38px;">
+                                   <i class="fas fa-envelope" id="email-icon"></i>
+                               </span>
+                           </div>
+                           <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" aria-describedby="email-icon" required>
+                       </div>
+                   </div>
+               </div>
                 <div class="col-md-8 pt-3">
                     <div class="form-group">
                         <label class="form-label" for="message">Message <span class="text-danger">*</span></label>
