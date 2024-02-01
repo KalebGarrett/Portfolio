@@ -1,16 +1,19 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.Web.Models;
+using Portfolio.Web.Services;
 
 namespace Portfolio.Web.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ProjectService _projectService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, ProjectService projectService)
     {
         _logger = logger;
+        _projectService = projectService;
     }
 
     public IActionResult Index()
@@ -25,10 +28,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Project()
+    public async Task<IActionResult> Project()
     {
+        var model = new ProjectViewModel();
+        model.Projects = await _projectService.GetAll();
         ViewData["Title"] = "Project";
-        return View();
+        return View(model);
     }
 
     public IActionResult Contact()
@@ -42,7 +47,7 @@ public class HomeController : Controller
         ViewData["Title"] = "Submission";
         return View();
     }
-    
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
