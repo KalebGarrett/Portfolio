@@ -21,4 +21,10 @@ public class Project
 
     [JsonPropertyName("whatILearned")]
     public string WhatILearned { get; set; }
+    
+    [JsonPropertyName("applicationLink")]
+    public string ApplicationLink { get; set; }
+    
+    [JsonPropertyName("gitHubLink")]
+    public string GitHubLink { get; set; }
 }
