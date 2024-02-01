@@ -1,4 +1,13 @@
-﻿<section class="gray-content-box-padding">
+﻿@{
+    ViewData["Title"] = "Project";
+}
+
+<section class="gray-content-box-padding">
+    <div class="container gray-content-box"></div>
+    <h1 class="col-12 text-center text-warning" style="font-size: 48px">Projects</h1>
+</section>
+
+<section class="gray-content-box-padding">
 <div class="container gray-content-box">
 <h1 class="col-12 text-center text-warning" style="font-size: 48px">Projects</h1>
 <br/>
@@ -347,7 +356,7 @@
                 <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card10">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card10">
                     <li class="list-group-item">
-                        <b>Challenges:</b> <br/> Embracing a new framework like DSharpPlus presented a significant learning curve. Adapting to the framework's conventions, 
+                        <b>Challenges:</b> <br/> Embracing a new framework like DSharpPlus presented a significant learning curve. Adapting to the framework's conventions,
                         understanding its architecture, and utilizing its features efficiently were challenges on its own.
                     </li>
                     <li class="list-group-item">
@@ -355,7 +364,7 @@
                         helped tremendously. Experimentation gradually helped me to overcome the learning curve.
                     </li>
                     <li class="list-group-item">
-                        <b>What I learned:</b> <br/> Slash commands provide a more natural and user-friendly way for individuals to interact with the bot. The command structure 
+                        <b>What I learned:</b> <br/> Slash commands provide a more natural and user-friendly way for individuals to interact with the bot. The command structure
                         is intuitive, making it easier for users to discover and use functionalities.
                     </li>
                 </ul>
@@ -379,12 +388,12 @@
                 <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card11">More Info</button>
                 <ul class="list-group list-group-flush collapse text-center" id="card11">
                     <li class="list-group-item">
-                        <b>Challenges:</b> <br/> One of the primary hurdles I encountered while developing PremBot was grappling with API limits and quotas, a challenge 
+                        <b>Challenges:</b> <br/> One of the primary hurdles I encountered while developing PremBot was grappling with API limits and quotas, a challenge
                         amplified by DSharpPlus's rate limit of 25 entities. This limitation introduced complexities that needed careful consideration and strategic handling.
                     </li>
                     <li class="list-group-item">
                         <b>Solutions:</b> <br/> I strategically divided the task into two phases. Initially, I fetched the data for the first 25 games in a season. Subsequently,
-                        I implemented an additional service dedicated to acquiring the data for the remaining 13 games. 
+                        I implemented an additional service dedicated to acquiring the data for the remaining 13 games.
                     </li>
                     <li class="list-group-item">
                         <b>What I learned:</b> <br/> Dealing with DSharpPlus's rate limit pushed me to fine-tune my understanding of rate-limiting mechanisms in API interactions.

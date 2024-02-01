@@ -18,13 +18,11 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewData["Title"] = "Kaleb Garrett";
         return View();
     }
 
     public IActionResult About()
     {
-        ViewData["Title"] = "About";
         return View();
     }
 
@@ -32,19 +30,16 @@ public class HomeController : Controller
     {
         var model = new ProjectViewModel();
         model.Projects = await _projectService.GetAll();
-        ViewData["Title"] = "Project";
         return View(model);
     }
 
     public IActionResult Contact()
     {
-        ViewData["Title"] = "Contact";
         return View();
     }
 
     public IActionResult Submission()
     {
-        ViewData["Title"] = "Submission";
         return View();
     }
 
