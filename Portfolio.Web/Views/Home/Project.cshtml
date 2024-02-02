@@ -1,413 +1,50 @@
 ﻿@{
     ViewData["Title"] = "Project";
 }
+@model ProjectViewModel
 
 <section class="gray-content-box-padding">
-    <div class="container gray-content-box"></div>
-    <h1 class="col-12 text-center text-warning" style="font-size: 48px">Projects</h1>
-</section>
-
-<section class="gray-content-box-padding">
-<div class="container gray-content-box">
-<h1 class="col-12 text-center text-warning" style="font-size: 48px">Projects</h1>
-<br/>
-<div class="container">
-<div class="row gy-3">
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/site-v2.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Portfolio Website - ASP.NET MVC</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    My portfolio website built with .NET MVC hosted on Azure to my practice front-end skills and to display projects I have created.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card1">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card1">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> The biggest challenge I faced was vertical alignment. I had keep a responsive design in mind in order to achieve an
-                        equally uniform design. In addition, I also had an issue keeping all of the cards on my project page the same height and making sure the buttons
-                        on the page were also the same height.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> Keeping everything in the grid system was one of the biggest solutions to keeping all of the cards uniform. It allowed me to make all
-                        of the cards the same height and adding a little bit of padding helped me to achieve keeping the buttons leveled with one another. Furthermore, adding a card
-                        gutter allowed me to add spacing between the cards instead of having them all connected.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> What I learned from building my website is that it can be difficult to start from scratch and figure the overall theme I wanted to
-                        use. Designing my personal website has allowed me to expand my knowledge and concepts of Bootstrap to where I feel more comfortable than ever using the grid system
-                        and how the flex box concept works and how they are applied to a website.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://kalebgarrett.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-microsoft" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                    <a href="https://github.com/KalebGarrett/Portfolio" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
+    <div class="container gray-content-box">
+        <h1 class="col-12 text-center text-warning" style="font-size: 48px">Projects</h1>
+        <br/>
+        <div class="container">
+            <div class="row gy-3">
+                @foreach (var project in Model.Projects.OrderBy(x => x.ProjectName))
+                {
+                    <div class="col-md-4">
+                        <div class="card text-center" style="width: 100%">
+                            <img src="@project.ImageUrl" alt="Card Image" class="img-fluid card-photo"/>
+                            <div class="card-header" style="font-size: 18px">@project.ProjectName</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Description</h5>
+                                <p class="card-text">
+                                    @project.Description
+                                </p>
+                                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#project_@project.Id">More Info</button>
+                                <ul class="list-group list-group-flush collapse text-center" id="project_@project.Id">
+                                    <li class="list-group-item">
+                                        <b>Challenges:</b> <br/> @project.Challenges
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>Solutions:</b> <br/> @project.Solutions
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>What I learned:</b> <br/> @project.WhatILearned
+                                    </li>
+                                </ul>
+                                <div class="card-body d-flex justify-content-center">
+                                    <a href="@project.ApplicationLink" class="card-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-microsoft" style="color: #1797ff; font-size: 24px;"></i>
+                                    </a>
+                                    <a href="@project.GitHubLink" class="card-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/amiibo-card-img.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Amiibos - ASP.NET MVC</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A Nintendo Amiibo information app built with .NET MVC that pulls from Amiibo's API.
-                </p>
-                <div class="pt-4 ">
-                    <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card2">More Info</button>
-                </div>
-                <ul class="list-group list-group-flush collapse text-center" id="card2">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This project presented several difficulties. Trying to learn about Generics, Lambda expressions, to integrating to the
-                        Amiibo API was a big challenge for me.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> This was my third attempt at building a web app that pulls from an API. I tried to figure out as much as I could on my own
-                        before asking for assistance to complete the web app. I was able to get 85% of the way there on my own.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> After my third attempt, I learned more about how Generics work and how Lambda expressions are more efficient at
-                        creating a function. In addition, I developed a greater comprehension of how the backend of things functions while pulling data from an API.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://amiibos.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-microsoft" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                    <a href="https://github.com/KalebGarrett/Amiibo" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/mygarden.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">My Garden - ASP.NET Blazor & API</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A garden tracker app that tracks the progress of your plants.
-                </p>
-                <div class="pt-4 ">
-                    <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card3">More Info</button>
-                </div>
-                <ul class="list-group list-group-flush collapse text-center" id="card3">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> Developing the ASP.NET MVC Blazor app with a garden tracking API presented several
-                        hurdles. Designing an adaptable user interface for various plant types and garden layouts proved challenging.
-                        Ensuring real-time data management for plant growth and to-do lists without compromising data integrity also
-                        required careful planning.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I overcame the challenges by conducting extensive research on building APIs and
-                        successfully implementing the fundamental aspects of API development. This included designing endpoints,
-                        handling data, and establishing the core functionality required for garden progress tracking and to-do management
-                        within the ASP.NET Blazor app.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> The project enhanced my understanding of API development, data management,
-                        and real-time updates, which are valuable skills for future web application projects.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://mygardengrowth.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-microsoft" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                    <a href="https://github.com/KalebGarrett/MyGarden/tree/main" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
-<div class="row gy-3">
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/daily-comic.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Comic Craze - ASP.NET MVC</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A comic app that utilizes the xkcd API. Built with ASP.NET MVC.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card4">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card4">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> There were not many notable challenges while making this .NET MVC app. However, I did have trouble with
-                        making a carousel for the featured comics section. I was specifically having trouble with making the comic strips transition between
-                        one another.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I was able to find out how to make the carousel work by going to Bootstrap's offical documentation to learn how to
-                        hook up the functionality. Once I figured out how to make the comic strips transition between one another, I realized how easy it actually was
-                        to set up a carousel slide.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> What I learned is that using a bootstrap carousel slide is a great way to grab the attention of website visitors and
-                        it is useful if you have a lot of products to showcase all at once.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://comiccraze.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-microsoft" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                    <a href="https://github.com/KalebGarrett/ComicCraze" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/weather-forecast.jpg" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Weather Forecast- ASP.NET MVC</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A weather forecast app build with .NET MVC, Jquery, and AJAX.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card5">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card5">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This project presented several difficulties. This was my first attempt trying to learn how to
-                        use Jquery and AJAX to make an asynchronous HTTP request.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I already have past knowledge of Javascript so I used W3Schools to learn how to use Jquery and use
-                        AJAX to make an asynchronous HTTP get request. I created a constant variable for both the API key and API URL and used a
-                        get method to request and specify the API endpoint and then send the request.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> I learned how much easier it is to utilize Jquery versus using traditional Javascript. Being able to
-                        manipulate the DOM with less code and using new features made it easy to quickly learn Jquery. Furthermore, using AJAX made it easy
-                        to make an HTTP get request to request data from the Open Weather API and use the data to display on my weather app.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://simpleweatherforecast.azurewebsites.net/" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-microsoft" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                    <a href="https://github.com/KalebGarrett/WeatherForecast" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/triviabot-about.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Trivia Bot - Discord Bot</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A Discord bot built with Discord.NET and Docker that gives the user trivia questions.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card6">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card6">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This was my second time making a Discord bot. Configuring the bot was straightforward. The issue I had was trying to find out
-                        how to create a visual embed along with creating buttons that the user can interact with to answer the trivia questions.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I was able to find the solution by looking up the Discord.Net documentation to follow the procedures to create visual embeds for
-                        my trivia bot and how to create interactive buttons.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> What I learned is that Discord.Net and the documentation are full of useful tools and features that I can use to create any kind
-                        of the bot to my heart's content.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://github.com/KalebGarrett/TriviaBot" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
-<div class="row gy-3 text-center">
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/about.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Joke Bot - Discord Bot</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A Discord bot built with C# and Docker to utilize the Joke API.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card7">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card7">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> Building a Discord bot presented a few challenges such as learning how to use Docker to create an image and
-                        how to get the discord bot up and running.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I looked up several methods on how to build the main program for the Discord bot and I eventually settled on
-                        one that was simplistic and easy to follow and understand. Furthermore, I went to Docker's official website and learned how to create an image
-                        by creating a Docker file and build containers to run an instance of the Discord bot.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> What I learned was that Docker is a great tool to use if you want to host an instance of the same application several times
-                        by creating an image. You can think of an image as a class and containers as objects. An image represents the collection of data and the containers are the
-                        instance of the image by that you can create different instances from one image.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://github.com/KalebGarrett/JokeBot" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/rock-paper-scissors.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Rock Paper Scissors- Web App</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A web app of Rock Paper Scissors built with HTML, CSS, and JavaScript.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card8">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card8">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This project was my first time creating a more visual and interactive JavaScript program.
-                        At the time of coding the program, I was still fairly new to JavaScript and I was still learning how to utilize its
-                        unique behaviors.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> Setting up the program was a bit of a challenge at the time. I had to figure out how to state
-                        the conditions for the player either winning or losing against the computer. I ended up creating a check winner function to check
-                        what the computer picked and what the player pick to determine what message to display.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> I learned how quick and easy it is to learn JavaScript and how it can be used to maniuplated DOM on several
-                        different web browsers. JavaScript caters to beginners which made it easy for me to understand how to utilize the different tools it has
-                        to offer.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://github.com/KalebGarrett/RockPaperScissors" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/central-plaza-card-img.JPG" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Central Plaza - Console App</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A console app demonstrating Inheritance and Polymorphism.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card9">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card9">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> This project was relatively straightforward. The biggest challenge I encountered was trying to make my code less
-                        redundant as possible by using Inheritance and Polymorphism.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I utilized several resources from W3Schools to videos to learn more about how to use Inheritance and Polymorphism.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> I learned that using Inheritance and Polymorphism is a very important concept to grasp because they
-                        allow programmers to create classes that are built upon existing classes, specify a new implementation while maintaining the same behaviors, and reuse code.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://github.com/KalebGarrett/CentralPlaza" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
-<div class="row gy-3">
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/factbot-about.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Fact Bot - Discord Bot</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A Discord bot that gives the user random facts.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card10">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card10">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> Embracing a new framework like DSharpPlus presented a significant learning curve. Adapting to the framework's conventions,
-                        understanding its architecture, and utilizing its features efficiently were challenges on its own.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> Spending dedicated time to thoroughly study the DSharpPlus documentation and actively participate in the framework's community
-                        helped tremendously. Experimentation gradually helped me to overcome the learning curve.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> Slash commands provide a more natural and user-friendly way for individuals to interact with the bot. The command structure
-                        is intuitive, making it easier for users to discover and use functionalities.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://github.com/Bot-Harbor/FactBot" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-center" style="width: 100%">
-            <img src="/img/prembot-about.png" alt="Card Image" class="img-fluid card-photo"/>
-            <div class="card-header" style="font-size: 18px">Prem Bot - Discord Bot</div>
-            <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p class="card-text">
-                    A Discord bot that gives you information about the Premiere League.
-                </p>
-                <button class="btn btn-primary w-75" data-bs-toggle="collapse" data-bs-target="#card11">More Info</button>
-                <ul class="list-group list-group-flush collapse text-center" id="card11">
-                    <li class="list-group-item">
-                        <b>Challenges:</b> <br/> One of the primary hurdles I encountered while developing PremBot was grappling with API limits and quotas, a challenge
-                        amplified by DSharpPlus's rate limit of 25 entities. This limitation introduced complexities that needed careful consideration and strategic handling.
-                    </li>
-                    <li class="list-group-item">
-                        <b>Solutions:</b> <br/> I strategically divided the task into two phases. Initially, I fetched the data for the first 25 games in a season. Subsequently,
-                        I implemented an additional service dedicated to acquiring the data for the remaining 13 games.
-                    </li>
-                    <li class="list-group-item">
-                        <b>What I learned:</b> <br/> Dealing with DSharpPlus's rate limit pushed me to fine-tune my understanding of rate-limiting mechanisms in API interactions.
-                    </li>
-                </ul>
-                <div class="card-body d-flex justify-content-center">
-                    <a href="https://github.com/Bot-Harbor/PremBot" class="card-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github" style="color: #1797ff; font-size: 24px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
 </section>
