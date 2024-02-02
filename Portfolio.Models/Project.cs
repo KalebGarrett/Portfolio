@@ -27,4 +27,7 @@ public class Project
     
     [JsonPropertyName("gitHubLink")]
     public string GitHubLink { get; set; }
+    
+    [JsonPropertyName("imageUrl")]
+    public string ImageUrl { get; set; }
 }
