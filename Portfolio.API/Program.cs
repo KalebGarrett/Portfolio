@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Portfolio.API.Authentication;
 using Portfolio.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +33,9 @@ else
 
 app.UseHttpsRedirection();
 
-//Enable CORS
+app.UseMiddleware<ApiKeyAuthMiddleware>();
+
+// Enable CORS
 app.UseCors(x => x
     .AllowAnyHeader()
     .AllowAnyOrigin()
