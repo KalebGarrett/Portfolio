@@ -18,8 +18,9 @@ public class ProjectService
         using var client = new HttpClient();
 
         var apiKey = _configuration.GetValue<string>(AuthConstants.ApiKeySectionName);
-
-        client.DefaultRequestHeaders.Add("x-api-key", apiKey);
+        var requestHeader = AuthConstants.ApiKeyHeaderName;
+        
+        client.DefaultRequestHeaders.Add(requestHeader, apiKey);
         var response = await client.GetAsync("https://kalebgarrettapi.azurewebsites.net/projects");
 
         if (response.IsSuccessStatusCode)
